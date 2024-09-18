@@ -1,7 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println("Hello, world!!!")
+	var str string
+	var stroutput string = "0"
+	fmt.Scan(&str)
+	for i := 0; i < len(str); i++ {
+		if str[i] > stroutput[0] {
+			stroutput = string(str[i])
+		}
+	}
+	fmt.Println(stroutput)
 }
